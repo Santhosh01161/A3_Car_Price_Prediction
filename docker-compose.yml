@@ -2,16 +2,19 @@ version: '3.8'
 
 services:
   web:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile
+    platform: linux/x86_64
     ports:
       - "8080:8080"
+    volumes:
+      - .:/app
     environment:
       - FLASK_ENV=production
       - APP_MODEL_NAME=${APP_MODEL_NAME}
       - MLFLOW_TRACKING_URI=${MLFLOW_TRACKING_URI}
-    restart: unless-stopped
+    command: sleep infinity 
 
 #   mlflow:
 #     build:
