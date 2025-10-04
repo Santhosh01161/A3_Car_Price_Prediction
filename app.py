@@ -1,20 +1,24 @@
-
 import numpy as np
 from flask import Flask, request, render_template
-import pickle
+import cloudpickle
 
 # Create the Flask application
 app = Flask(__name__)
 
-# Load your pre-trained machine learning model from the .pkl file
-# Ensure the path "model/car-price-prediction.pkl" is correct
-model = pickle.load(open("cppm_a3_model.pkl", "rb"))
-scaler = pickle.load(open("cppm_a3_scaler.pkl", "rb"))
+# Load your pre-trained machine learning model and scaler using cloudpickle
+# This avoids version mismatch issues with pickle (e.g., numpy, sklearn upgrades)
+with open("cppm_a3_model.pkl", "rb") as f:
+    model = cloudpickle.load(f)
+
+with open("cppm_a3_scaler.pkl", "rb") as f:
+    scaler = cloudpickle.load(f)
+
 
 @app.route('/', methods=['GET'])
 def home():
     """Renders the main page (index.html) when a user first visits."""
     return render_template('index.html')
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -28,27 +32,24 @@ def predict():
         km_driven = float(request.form['kmdriven'])
         year = float(request.form['Year'])
 
-        # Create a NumPy array with the features in the correct order for your model
+        # Prepare features for the model
         features = np.array([[max_power, km_driven, year]])
         features = scaler.transform(features)
-        
-        # Use the loaded model to make a prediction
+
+        # Predict
         prediction = model.predict(features)
-    
 
-
-        # Format the prediction to be more user-friendly (e.g., two decimal places)
-
+        # Format prediction
         prediction_text = f"Predicted Car Class is {prediction[0]}"
 
-        # Render the index.html page again, passing the prediction text to it
         return render_template('index.html', prediction_text=prediction_text)
 
     except Exception as e:
-        # Handle any errors during conversion or prediction
+        # Handle any errors gracefully
         error_message = f"Error: {str(e)}"
         return render_template('index.html', prediction_text=error_message)
 
+
 if __name__ == '__main__':
     # Run the Flask app in debug mode for development
-    app.run(host='0.0.0.0',port=8080,debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=True)

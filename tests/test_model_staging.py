@@ -2,11 +2,11 @@ import os
 import numpy as np
 import pandas as pd
 import pytest
-import pickle
+import cloudpickle
 from app import app  # Import Flask app
 
-# Paths
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))   # .../code
+# ---------------- PATHS ----------------
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))   # .../tests
 PROJECT_ROOT = os.path.abspath(os.path.join(BASE_DIR, ".."))
 MODELS_DIR = PROJECT_ROOT   # because cppm_a3_model.pkl and scaler are in root
 DATA_PATH = os.path.join(PROJECT_ROOT, "Cars.csv")
@@ -15,12 +15,12 @@ DATA_PATH = os.path.join(PROJECT_ROOT, "Cars.csv")
 @pytest.fixture(scope="module")
 def model():
     with open(os.path.join(MODELS_DIR, "cppm_a3_model.pkl"), "rb") as f:
-        return pickle.load(f)
+        return cloudpickle.load(f)
 
 @pytest.fixture(scope="module")
 def scaler():
     with open(os.path.join(MODELS_DIR, "cppm_a3_scaler.pkl"), "rb") as f:
-        return pickle.load(f)
+        return cloudpickle.load(f)
 
 @pytest.fixture
 def client():
