@@ -29,6 +29,7 @@ RUN pip install --upgrade pip
 RUN pip install --no-cache -r requirements.txt
 RUN pip install 'dash[testing]' pytest pytest-depends
 RUN pip install scikit-learn==1.7.1
+RUN pip install gunicorn  # explicitly add gunicorn
 
 # Copy ALL local files (including app.py) into /app
 COPY . .
