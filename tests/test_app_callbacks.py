@@ -1,20 +1,31 @@
 import pytest
-import numpy as np
-import dash
-from dash import Dash
+from app import app
 
-# Create a Dash app instance before importing pages
-app = Dash(__name__, use_pages=True, pages_folder="")
-
-# Now import the pages
-from pages import a3_model
-
-def test_a3_model_callback():
-    result = a3_model.predict_price_a3(1, 140.0, 120000, 2013)
-    assert "Predicted Selling Price Class:" in str(result) or "Error:" in str(result)
-    assert result != "Enter details and click Predict."
+@pytest.fixture
+def client():
+    with app.test_client() as client:
+        yield client
 
 
-def test_a3_model_no_clicks():
-    result = a3_model.predict_price_a3(0, 140.0, 120000, 2013)
-    assert result == "Enter details and click Predict."
+def test_a3_model_callback(client):
+    """Test Flask app with valid prediction inputs."""
+    response = client.post("/predict", data={
+        "maxpower": "140.0",
+        "kmdriven": "120000",
+        "Year": "2013"
+    })
+    assert response.status_code == 200
+    # It should either succeed with a prediction or return an error message
+    assert b"Predicted Car Class is" in response.data or b"Error:" in response.data
+
+
+def test_a3_model_no_clicks(client):
+    """Test Flask app with missing/empty inputs (no clicks)."""
+    response = client.post("/predict", data={
+        "maxpower": "",
+        "kmdriven": "",
+        "Year": ""
+    })
+    assert response.status_code == 200
+    # Should handle gracefully with error message
+    assert b"Error:" in response.data or b"Enter details" in response.data
