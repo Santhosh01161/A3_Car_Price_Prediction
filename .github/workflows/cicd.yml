@@ -16,9 +16,6 @@ jobs:
     # Target machine that this job will run on.
     # ubuntu-latest or ubuntu-22.04 is the same image (as is August 2023)
     runs-on: ubuntu-latest
-    container:
-        image: python:3.12-slim
-        options: --memory=6g --cpus=2
     # Tasks, specify in list.
     steps:
       # https://github.com/actions/checkout: will clone Git into the image
