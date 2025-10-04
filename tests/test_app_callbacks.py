@@ -7,8 +7,7 @@ from dash import Dash
 app = Dash(__name__, use_pages=True, pages_folder="")
 
 # Now import the pages
-from pages import old_model, new_model, a3_model
-
+from pages import a3_model
 
 def test_a3_model_callback():
     result = a3_model.predict_price_a3(1, 140.0, 120000, 2013)
