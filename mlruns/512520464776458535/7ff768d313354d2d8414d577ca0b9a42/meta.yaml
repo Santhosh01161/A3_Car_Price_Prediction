@@ -1,0 +1,14 @@
+artifact_uri: /mlflow/mlruns/512520464776458535/7ff768d313354d2d8414d577ca0b9a42/artifacts
+end_time: 1757607684614
+entry_point_name: ''
+experiment_id: '512520464776458535'
+lifecycle_stage: active
+run_id: 7ff768d313354d2d8414d577ca0b9a42
+run_name: method-mini-lr-0.01-reg-Ridge-poly-True-momentum-Momentum Used-init-zero
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757607577706
+status: 3
+tags: []
+user_id: Santy

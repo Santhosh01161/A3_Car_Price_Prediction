@@ -1,0 +1,14 @@
+artifact_uri: /mlflow/mlruns/512520464776458535/03769de05aaf47899e19a6f1fe7a1c51/artifacts
+end_time: 1757649647612
+entry_point_name: ''
+experiment_id: '512520464776458535'
+lifecycle_stage: active
+run_id: 03769de05aaf47899e19a6f1fe7a1c51
+run_name: method-batch-lr-0.01-reg-Ridge-poly-False-momentum-Momentum Used-init-xavier
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757649520033
+status: 3
+tags: []
+user_id: Santy

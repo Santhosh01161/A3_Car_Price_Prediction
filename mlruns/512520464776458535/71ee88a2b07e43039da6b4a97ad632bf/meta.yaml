@@ -1,0 +1,15 @@
+artifact_uri: /mlflow/mlruns/512520464776458535/71ee88a2b07e43039da6b4a97ad632bf/artifacts
+deleted_time: 1757602848417
+end_time: 1757589584736
+entry_point_name: ''
+experiment_id: '512520464776458535'
+lifecycle_stage: deleted
+run_id: 71ee88a2b07e43039da6b4a97ad632bf
+run_name: method-batch-lr-0.1-reg-Ridge-poly-False
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757589536249
+status: 3
+tags: []
+user_id: Santy

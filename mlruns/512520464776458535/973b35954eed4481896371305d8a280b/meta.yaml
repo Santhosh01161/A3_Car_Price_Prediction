@@ -1,0 +1,14 @@
+artifact_uri: /mlflow/mlruns/512520464776458535/973b35954eed4481896371305d8a280b/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '512520464776458535'
+lifecycle_stage: active
+run_id: 973b35954eed4481896371305d8a280b
+run_name: method-sto-lr-0.01-reg-Normal-poly-True-momentum-True-init-zero
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757766252254
+status: 1
+tags: []
+user_id: Santy

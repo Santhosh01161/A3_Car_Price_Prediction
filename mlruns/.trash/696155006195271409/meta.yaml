@@ -1,0 +1,7 @@
+artifact_location: /mlflow/mlruns/696155006195271409
+creation_time: 1757176799258
+experiment_id: '696155006195271409'
+last_update_time: 1757257512598
+lifecycle_stage: deleted
+name: car-price-experiment
+tags: {}

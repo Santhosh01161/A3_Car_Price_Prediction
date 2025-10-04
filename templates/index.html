@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title> ML API </title>
+    
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>  
+
+    <div class="login">
+	<h1 style="color: white;"> Car Price Prediction Model</h1>
+
+    <p style="color: rgb(255, 255, 255); font-size: 16px; margin: 10px auto 0 auto;">
+  How to use Webpage: <br><br>
+  1. Please fill in the details below about your car. <br><br>
+  2. Click the "PREDICT" button to see your estimated car price.
+    </p>
+<br><br>
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="maxpower" placeholder="Enter Maximum Engine Power" required="required" style="text-align: center" />
+        <input type="text" name="kmdriven" placeholder="Enter Kilometers Driven" required="required" style="text-align: center" />
+		<input type="text" name="Year" placeholder="Enter Car Manufactured Year" required="required" style="text-align: center" />
+        <br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">PREDICT</button>
+    </form>
+
+   <br>
+   <br>
+     <h1 id="predi">
+   {{ prediction_text }}
+     </h1>
+
+ </div>
+
+</body>
+</html>

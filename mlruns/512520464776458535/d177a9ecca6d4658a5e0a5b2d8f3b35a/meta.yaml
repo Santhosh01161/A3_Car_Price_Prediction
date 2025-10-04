@@ -1,0 +1,15 @@
+artifact_uri: /mlflow/mlruns/512520464776458535/d177a9ecca6d4658a5e0a5b2d8f3b35a/artifacts
+deleted_time: 1757602848196
+end_time: 1757521706072
+entry_point_name: ''
+experiment_id: '512520464776458535'
+lifecycle_stage: deleted
+run_id: d177a9ecca6d4658a5e0a5b2d8f3b35a
+run_name: method-batch-lr-0.1-reg-Normal-poly-False
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757521698599
+status: 3
+tags: []
+user_id: Santy

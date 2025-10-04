@@ -1,0 +1,14 @@
+artifact_uri: /mlflow/mlruns/512520464776458535/2dfecf5b4997425aba459d1db14529d6/artifacts
+end_time: 1757670880507
+entry_point_name: ''
+experiment_id: '512520464776458535'
+lifecycle_stage: active
+run_id: 2dfecf5b4997425aba459d1db14529d6
+run_name: method-sto-lr-0.0001-reg-Normal-poly-True-momentum-Momentum not used-init-zero
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757670781936
+status: 3
+tags: []
+user_id: Santy

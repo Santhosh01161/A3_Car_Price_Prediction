@@ -1,0 +1,16 @@
+artifact_uri: /mlflow/mlruns/696155006195271409/7485d2af1488494587227c0b61d0fb34/artifacts
+deleted_time: 1757256595539
+end_time: 1757178096409
+entry_point_name: ''
+experiment_id: '696155006195271409'
+lifecycle_stage: deleted
+run_id: 7485d2af1488494587227c0b61d0fb34
+run_name: car_price_prediction
+run_uuid: 7485d2af1488494587227c0b61d0fb34
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757178096346
+status: 4
+tags: []
+user_id: santhosh

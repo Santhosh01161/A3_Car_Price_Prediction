@@ -1,0 +1,15 @@
+artifact_uri: /mlflow/mlruns/512520464776458535/a061450339c84fe8a9589a73cde4118c/artifacts
+deleted_time: 1757602823661
+end_time: 1757432703141
+entry_point_name: ''
+experiment_id: '512520464776458535'
+lifecycle_stage: deleted
+run_id: a061450339c84fe8a9589a73cde4118c
+run_name: method-mini-lr-0.01-reg-Ridge-poly-True-momentum-Momentum Used-init-xavier
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757432694272
+status: 3
+tags: []
+user_id: Santy

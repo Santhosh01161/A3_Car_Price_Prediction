@@ -1,0 +1,15 @@
+artifact_uri: /mlflow/mlruns/512520464776458535/50b6d90923ac48b2b632d49ef4f3510b/artifacts
+deleted_time: 1757602848177
+end_time: 1757522248654
+entry_point_name: ''
+experiment_id: '512520464776458535'
+lifecycle_stage: deleted
+run_id: 50b6d90923ac48b2b632d49ef4f3510b
+run_name: method-batch-lr-0.1-reg-ElasticNet-poly-False
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757522242883
+status: 3
+tags: []
+user_id: Santy

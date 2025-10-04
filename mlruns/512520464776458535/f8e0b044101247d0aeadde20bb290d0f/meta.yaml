@@ -1,0 +1,15 @@
+artifact_uri: /mlflow/mlruns/512520464776458535/f8e0b044101247d0aeadde20bb290d0f/artifacts
+deleted_time: 1757602875853
+end_time: 1757516708432
+entry_point_name: ''
+experiment_id: '512520464776458535'
+lifecycle_stage: deleted
+run_id: f8e0b044101247d0aeadde20bb290d0f
+run_name: method-batch-lr-0.1-reg-Lasso
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757516680880
+status: 3
+tags: []
+user_id: Santy

@@ -1,0 +1,15 @@
+artifact_uri: /mlflow/mlruns/512520464776458535/ea47348d841f47f58b93b7504fc0fb68/artifacts
+deleted_time: 1757602809561
+end_time: 1757438009939
+entry_point_name: ''
+experiment_id: '512520464776458535'
+lifecycle_stage: deleted
+run_id: ea47348d841f47f58b93b7504fc0fb68
+run_name: method-mini-lr-0.01-reg-Lasso-poly-False-momentum-Momentum not used-init-zero
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757437977107
+status: 3
+tags: []
+user_id: Santy

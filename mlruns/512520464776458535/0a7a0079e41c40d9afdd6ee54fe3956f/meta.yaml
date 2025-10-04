@@ -1,0 +1,15 @@
+artifact_uri: /mlflow/mlruns/512520464776458535/0a7a0079e41c40d9afdd6ee54fe3956f/artifacts
+deleted_time: 1757602823431
+end_time: 1757447538905
+entry_point_name: ''
+experiment_id: '512520464776458535'
+lifecycle_stage: deleted
+run_id: 0a7a0079e41c40d9afdd6ee54fe3956f
+run_name: method-sto-lr-0.01-reg-Normal-poly-True-momentum-Momentum Used-init-xavier
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757447513733
+status: 3
+tags: []
+user_id: Santy

@@ -1,0 +1,14 @@
+artifact_uri: /mlflow/mlruns/512520464776458535/09b146175b934e76861b10809c5f6b86/artifacts
+end_time: 1757662084899
+entry_point_name: ''
+experiment_id: '512520464776458535'
+lifecycle_stage: active
+run_id: 09b146175b934e76861b10809c5f6b86
+run_name: method-sto-lr-0.01-reg-ElasticNet-poly-True-momentum-Momentum not used-init-xavier
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757661888649
+status: 3
+tags: []
+user_id: Santy

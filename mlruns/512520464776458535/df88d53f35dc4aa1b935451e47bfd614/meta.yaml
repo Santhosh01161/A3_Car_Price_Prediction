@@ -1,0 +1,15 @@
+artifact_uri: /mlflow/mlruns/512520464776458535/df88d53f35dc4aa1b935451e47bfd614/artifacts
+deleted_time: 1757602875878
+end_time: null
+entry_point_name: ''
+experiment_id: '512520464776458535'
+lifecycle_stage: deleted
+run_id: df88d53f35dc4aa1b935451e47bfd614
+run_name: method-batch-lr-0.1-reg-Ridge
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757515421544
+status: 1
+tags: []
+user_id: Santy

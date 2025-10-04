@@ -1,0 +1,15 @@
+artifact_uri: /mlflow/mlruns/512520464776458535/4c53c5263ae04a9a9f33cae67aefc307/artifacts
+deleted_time: 1757602838827
+end_time: 1757434088317
+entry_point_name: ''
+experiment_id: '512520464776458535'
+lifecycle_stage: deleted
+run_id: 4c53c5263ae04a9a9f33cae67aefc307
+run_name: method-batch-lr-0.0001-reg-Ridge-poly-True-momentum-Momentum not used-init-zero
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757433991384
+status: 3
+tags: []
+user_id: Santy

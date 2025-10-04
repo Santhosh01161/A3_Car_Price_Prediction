@@ -1,0 +1,15 @@
+artifact_uri: /mlflow/mlruns/512520464776458535/e679e49518fa472f9d974864e1b9959f/artifacts
+deleted_time: 1757602884574
+end_time: 1757450939716
+entry_point_name: ''
+experiment_id: '512520464776458535'
+lifecycle_stage: deleted
+run_id: e679e49518fa472f9d974864e1b9959f
+run_name: Fold-0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757450901363
+status: 3
+tags: []
+user_id: Santy
