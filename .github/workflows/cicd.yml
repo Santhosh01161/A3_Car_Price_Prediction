@@ -75,7 +75,7 @@ jobs:
           proxy_host: ${{ vars.PROXY_HOST }}
           proxy_username: ${{ secrets.USERNAME }}
           proxy_key: ${{ secrets.KEY }}
-          proxy_passphrase: ${{ secrets.PASSPHRASE }}
+          proxy_password: ${{ secrets.PASSWORD }}
           script: |
             cd st126107
             tag=${{ github.ref_name }} docker compose down
