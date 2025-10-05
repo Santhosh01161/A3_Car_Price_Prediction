@@ -71,7 +71,7 @@ jobs:
           host: ${{ vars.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-          passphrase: ${{ secrets.PASSPHRASE }}
+#          passphrase: ${{ secrets.PASSPHRASE }}
           proxy_host: ${{ vars.PROXY_HOST }}
           proxy_username: ${{ secrets.USERNAME }}
           proxy_key: ${{ secrets.KEY }}
