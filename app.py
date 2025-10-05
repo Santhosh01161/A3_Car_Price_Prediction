@@ -1,17 +1,28 @@
 import numpy as np
 from flask import Flask, request, render_template
 import cloudpickle
+import pickle
 
 # Create the Flask application
 app = Flask(__name__)
 
-# Load your pre-trained machine learning model and scaler using cloudpickle
-# This avoids version mismatch issues with pickle (e.g., numpy, sklearn upgrades)
-with open("cppm_a3_model.pkl", "rb") as f:
-    model = cloudpickle.load(f)
+# Load your pre-trained machine learning model and scaler
+# Try cloudpickle first, fallback to regular pickle if there are version issues
+try:
+    with open("cppm_a3_model.pkl", "rb") as f:
+        model = cloudpickle.load(f)
+except (AttributeError, ImportError) as e:
+    print(f"Cloudpickle failed, trying regular pickle: {e}")
+    with open("cppm_a3_model.pkl", "rb") as f:
+        model = pickle.load(f)
 
-with open("cppm_a3_scaler.pkl", "rb") as f:
-    scaler = cloudpickle.load(f)
+try:
+    with open("cppm_a3_scaler.pkl", "rb") as f:
+        scaler = cloudpickle.load(f)
+except (AttributeError, ImportError) as e:
+    print(f"Cloudpickle failed, trying regular pickle: {e}")
+    with open("cppm_a3_scaler.pkl", "rb") as f:
+        scaler = pickle.load(f)
 
 
 @app.route('/', methods=['GET'])
