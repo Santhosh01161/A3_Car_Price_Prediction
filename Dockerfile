@@ -1,5 +1,5 @@
 # Use slim Python image
-FROM python:3.12
+FROM python:3.11
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -23,7 +23,8 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install dependencies
-RUN pip install --upgrade pip setuptools wheel
+RUN pip install --upgrade pip
+RUN pip install setuptools==68.0.0 wheel
 RUN pip install --no-cache -r requirements.txt
 RUN pip install 'dash[testing]' pytest pytest-depends gunicorn
 
@@ -34,4 +35,4 @@ COPY . .
 EXPOSE 5000 80
 
 # Run the app
-CMD ["gunicorn", "--bind", "0.0.0.0:80", "app.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
