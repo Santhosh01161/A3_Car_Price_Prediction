@@ -49,8 +49,10 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           # Your image name
-          images: santy01161/web-app:latest
-          tags: type=semver,pattern={{raw}}
+          images: santy01161/web-app
+          tags: |
+            type=semver,pattern={{version}}
+            type=raw,value=latest
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
