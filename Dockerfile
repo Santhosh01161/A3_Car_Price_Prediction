@@ -21,13 +21,11 @@ WORKDIR /app
 
 # Copy requirements first
 COPY requirements.txt .
-COPY . /app
 
 # Install dependencies
-RUN pip install --upgrade pip
+RUN pip install --upgrade pip setuptools wheel
 RUN pip install --no-cache -r requirements.txt
-RUN pip install 'dash[testing]' pytest pytest-depends
-RUN pip install gunicorn  # explicitly add gunicorn
+RUN pip install 'dash[testing]' pytest pytest-depends gunicorn
 
 # Copy ALL local files (including app.py) into /app
 COPY . .
@@ -36,4 +34,4 @@ COPY . .
 EXPOSE 5000 80
 
 # Run the app
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:80", "app.py"]
