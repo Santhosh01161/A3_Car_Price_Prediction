@@ -2,7 +2,7 @@ import os
 import numpy as np
 import pandas as pd
 import pytest
-import cloudpickle
+import pickle   # switched from cloudpickle to pickle
 from app import app  # Import Flask app
 
 # ---------------- PATHS ----------------
@@ -15,12 +15,12 @@ DATA_PATH = os.path.join(PROJECT_ROOT, "Cars.csv")
 @pytest.fixture(scope="module")
 def model():
     with open(os.path.join(MODELS_DIR, "cppm_a3_model.pkl"), "rb") as f:
-        return cloudpickle.load(f)
+        return pickle.load(f)
 
 @pytest.fixture(scope="module")
 def scaler():
     with open(os.path.join(MODELS_DIR, "cppm_a3_scaler.pkl"), "rb") as f:
-        return cloudpickle.load(f)
+        return pickle.load(f)
 
 @pytest.fixture
 def client():
@@ -70,3 +70,4 @@ def test_flask_predict_invalid(client):
     })
     assert response.status_code == 200
     assert b"Error:" in response.data or b"Enter details" in response.data
+
