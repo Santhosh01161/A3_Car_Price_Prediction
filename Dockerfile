@@ -1,6 +1,9 @@
 # Use slim Python image
 FROM python:3.11
 
+# Set working directory
+WORKDIR /app
+
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
@@ -14,10 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 
-# Set Python path
-ENV PYTHONPATH=/app
-# Set working directory
-WORKDIR /app
+
 
 # Copy requirements first
 COPY requirements.txt .
@@ -28,6 +28,9 @@ RUN pip install setuptools==68.0.0 wheel
 RUN pip install --no-cache -r requirements.txt
 RUN pip install 'dash[testing]' pytest pytest-depends gunicorn
 
+# Set Python path
+ENV PYTHONPATH=/app
+
 # Copy ALL local files (including app.py) into /app
 COPY . .
 
@@ -35,4 +38,4 @@ COPY . .
 EXPOSE 5000 80
 
 # Run the app
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
+CMD ["gunicorn", "python", "--bind", "0.0.0.0:80", "app:app"]
